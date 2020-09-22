@@ -16,7 +16,13 @@ public class CupomFiscal {
 	public static String INSCRICAO_ESTADUAL = "244.898.500.113";
 
 	public static void main(final String[] args) {
-		//Implemente aqui
+		Loja loja = new Loja(NOME_LOJA, LOGRADOURO, NUMERO,
+				COMPLEMENTO, BAIRRO, MUNICIPIO,
+				ESTADO, CEP, TELEFONE, OBSERVACAO,
+				CNPJ, INSCRICAO_ESTADUAL);
+
+		CupomNF cupomFiscal = new CupomNF(loja);
+		cupomFiscal.imprime();
 	}
 
 }
